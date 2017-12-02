@@ -14,4 +14,3 @@ WIN_COMBINATIONS = [
    [0,4,8] #Diag Right
    [2,4,6] #diag left
  ]
-
