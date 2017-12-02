@@ -18,8 +18,24 @@ WIN_COMBINATIONS = [
 def won? (board)#returns true if someone won, false if no one did
 if board==[" "," "," "," "," "," "," "," "," "]
   false
-elsif draw?(board)
-  false
+end
+i=0
+while i<8
+  # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
+  # grab each index from the win_combination that composes a win.
+  win_index_1 = WIN_COMBINATIONS[i,0]
+  win_index_2 = WIN_COMBINATIONS[i,1]
+  win_index_3 = WIN_COMBINATIONS[i,2]
+
+  position_1 = board[win_index_1] # load the value of the board at win_index_1
+  position_2 = board[win_index_2] # load the value of the board at win_index_2
+  position_3 = board[win_index_3] # load the value of the board at win_index_3
+
+  if position_1 == "X" && position_2 == "X" && position_3 == "X"
+    return win_combination # return the win_combination indexes that won.
+  else
+    false
+  end
 end
 end
 
