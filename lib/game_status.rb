@@ -28,8 +28,9 @@ if draw?(board)
   true
 elsif board.include(" ")
     false
+else
+  true
 end
-true
 end
 
 def draw? (board)
