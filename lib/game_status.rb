@@ -34,6 +34,9 @@ end
 end
 
 def draw? (board)
+  if board.include(" ")
+    false
+  end
 
 end
 
