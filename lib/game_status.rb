@@ -15,14 +15,21 @@ WIN_COMBINATIONS = [
    [2,4,6] #diag left
  ]
 
-def won? (board)
+def won? (board)#returns true if someone won, false if no one did
 if board==[" "," "," "," "," "," "," "," "," "]
+  false
+elsif draw?(board)
   false
 end
 end
 
 def full? (board)
-
+if draw?(board)
+  true
+elsif board.include(" ")
+    false
+end
+true
 end
 
 def draw? (board)
